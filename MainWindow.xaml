@@ -1,0 +1,62 @@
+﻿<Window x:Class="NadijnistLab1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NadijnistLab1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1450" ResizeMode="NoResize" Background="LightSkyBlue">
+    <Grid>
+        <Canvas Margin="-20,-60,20,-18">
+            <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="150" Height="75" Canvas.Left="469" Canvas.Top="96" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock Text="1" FontWeight="Bold" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="150" Height="75" Canvas.Left="469" Canvas.Top="246" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <TextBlock Text="2" FontWeight="Bold" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="150" Height="75" Canvas.Left="686" Canvas.Top="171" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <TextBlock Text="3" FontWeight="Bold" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <Border BorderThickness="2" BorderBrush="Black" Background="White" Width="150" Height="75" Canvas.Left="911" Canvas.Top="171" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <TextBlock Text="4" FontWeight="Bold" FontSize="45" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+            <Line X1="2" Y1="1" X2="2" Y2="154" Stroke="Black" StrokeThickness="3" Width="2" Canvas.Left="417" Canvas.Top="130" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Ellipse Width="30" Height="30" Canvas.Left="339" Canvas.Top="194" Stroke="Black" StrokeThickness="2" Fill="Green" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Line X1="1" Y1="96" X2="369" Y2="96" Stroke="Black" StrokeThickness="2" Width="25" Canvas.Left="662" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Line X1="0" Y1="100" X2="100" Y2="100" Stroke="Black" StrokeThickness="2" Width="45" Canvas.Left="619" Canvas.Top="32" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Line X1="2" Y1="1" X2="2" Y2="154" Stroke="Black" StrokeThickness="3" Width="2" Canvas.Left="662" Canvas.Top="132" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Line X1="0" Y1="100" X2="100" Y2="100" Stroke="Black" StrokeThickness="2" Width="45" Canvas.Left="619" Canvas.Top="185" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Line X1="1" Y1="96" X2="369" Y2="96" Stroke="Black" StrokeThickness="2" Width="80" Canvas.Left="833" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Line X1="1" Y1="96" X2="369" Y2="96" Stroke="Black" StrokeThickness="2" Width="60" Canvas.Left="1059" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Ellipse Width="30" Height="30" Canvas.Left="1119" Canvas.Top="192" Stroke="Black" StrokeThickness="2" Fill="Red" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Line X1="28" Y1="96" X2="369" Y2="96" Stroke="Black" StrokeThickness="2" Width="80" Canvas.Left="390" Canvas.Top="36" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Line X1="28" Y1="96" X2="369" Y2="96" Stroke="Black" StrokeThickness="2" Width="80" Canvas.Left="390" Canvas.Top="187" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Line X1="28" Y1="96" X2="369" Y2="96" Stroke="Black" StrokeThickness="2" Width="80" Canvas.Left="339" Canvas.Top="112" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        </Canvas>
+        <StackPanel Orientation="Horizontal" Canvas.Left="469" Canvas.Top="96" Margin="10,-60,-10,60">
+            <TextBlock Text="a1:" Width="50" Height="50" FontSize="35" Padding="5 0 0 0" />
+            <TextBox x:Name="a1TextBox" Width="150" Height="30" FontSize="20" Text="0,00005" InputScope="Number"/>
+            <TextBlock Text="a2:" Width="50" Height="50" FontSize="35" Padding="5 0 0 0"/>
+            <TextBox x:Name="a2TextBox" Width="150" Height="30" FontSize="20" Text="0,00005" InputScope="Number"/>
+            <TextBlock Text="a3:" Width="50" Height="50" FontSize="35" Padding="5 0 0 0"/>
+            <TextBox x:Name="a3TextBox" Width="150" Height="30" FontSize="20" Text="0,00005" InputScope="Number"/>
+            <TextBlock Text="a4:" Width="50" Height="50" FontSize="35" Padding="5 0 0 0"/>
+            <TextBox x:Name="a4TextBox" Width="150" Height="30" FontSize="20" Text="0,00005" InputScope="Number"/>
+            <TextBlock Text="Delta:" Width="100" Height="50" FontSize="35" Padding="10 0 0 0"/>
+            <TextBox x:Name="deltaTextBox" Width="150" Height="30" FontSize="20" Text="100" InputScope="Number"/>
+            <TextBlock Text="t:" Width="50" Height="50" FontSize="35" Padding="25 0 0 0"/>
+            <TextBox x:Name="tTextBox" Width="150" Height="30" FontSize="20" Text="100" InputScope="Number"/>
+        </StackPanel>
+        <DataGrid x:Name="dataGrid" Margin="10,374,10,60" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="T" Binding="{Binding T}" Width="*"/>
+                <DataGridTextColumn Header="P1" Binding="{Binding P1}" Width="*"/>
+                <DataGridTextColumn Header="P2" Binding="{Binding P2}" Width="*"/>
+                <DataGridTextColumn Header="P3" Binding="{Binding P3}" Width="*"/>
+                <DataGridTextColumn Header="SUM" Binding="{Binding SUM}" Width="*"/>
+                <DataGridTextColumn Header="p(t)" Binding="{Binding pt}" Width="*"/>
+                <DataGridTextColumn Header="q(t)" Binding="{Binding qt}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
